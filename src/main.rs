@@ -5,9 +5,6 @@
  *
  */
 
-// Puzzle isn't being read correctly and causing errors
-// fix index out of bounds error if possible
-
 use std::env;
 use std::fs;
 
@@ -37,9 +34,6 @@ impl Default for Puzzle {
 }
 
 impl Puzzle{
-
-
-
     fn is_safe(&mut self, val: usize, row: usize, col: usize) -> bool {
         return !(self.row_has_val[row][val])
                 && !(self.col_has_val[col][val])
